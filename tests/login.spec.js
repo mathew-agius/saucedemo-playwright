@@ -15,7 +15,7 @@ test.describe('Login tests', () => {
 
   test('invalid credentials shows error', async ({ page }) => {
     const login = new LoginPage(page);
-    await login.login('bad_user', 'bad_pass');
+    await login.login('standard_user', 'secret_sauce');
     await expect(page.locator('[data-test="error"]')).toBeVisible();
   });
 });
